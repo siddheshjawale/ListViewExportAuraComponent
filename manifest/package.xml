@@ -13,11 +13,11 @@
 		<name>AuraDefinitionBundle</name>
 	</types>
 	<types>
-		<members>Generic_Standard_Export__mdt.Client_Id__c</members>
-		<members>Generic_Standard_Export__mdt.Client_Secret__c</members>
-		<members>Generic_Standard_Export__mdt.Password__c</members>
-		<members>Generic_Standard_Export__mdt.Token__c</members>
-		<members>Generic_Standard_Export__mdt.Username__c</members>
+		<members>Export__mdt.Client_Id__c</members>
+		<members>Export__mdt.Client_Secret__c</members>
+		<members>Export__mdt.Password__c</members>
+		<members>Export__mdt.Token__c</members>
+		<members>Export__mdt.Username__c</members>
 		<members>ObjectAndFields__mdt.Field__c</members>
 		<members>ObjectAndFields__mdt.Filter_Name__c</members>
 		<members>ObjectAndFields__mdt.Label__c</members>
@@ -27,7 +27,7 @@
 		<name>CustomField</name>
 	</types>
 	<types>
-		<members>Generic_Standard_Export__mdt</members>
+		<members>Export__mdt</members>
 		<members>ObjectAndFields__mdt</members>
 		<name>CustomObject</name>
 	</types>
