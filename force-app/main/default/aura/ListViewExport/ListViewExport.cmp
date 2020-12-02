@@ -1,0 +1,49 @@
+<aura:component controller="GenericStandardListViewExportController" extends="c:Base">
+    
+    <aura:attribute name="objectApiName" type="String" access="public"/>
+    <aura:attribute name="ObjectName" type="String"/>
+    <aura:attribute name="fileName" type="String" default="fileName.csv"/>
+    <aura:attribute name="returnURL" type="String"/>
+    <aura:attribute name="limitRecords" type="Integer" default="4000"/>
+    
+    <aura:attribute name="message" type="String" description="Message content, can be HTML"/>
+    <aura:attribute name="type" type="String" description="Message type, can be error/warning/info/success"/>
+    <aura:attribute name="sObjectListViewList" type="ListView[]"/>
+    <aura:attribute name="mycolumns" type="Object[]" access="public"/>
+    <aura:attribute name="showSpinner" type="boolean" default="true"/>
+    
+    <lightning:workspaceAPI aura:id="workspace"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <aura:if isTrue="{!v.showSpinner}">
+        <div class="spinnerWrapper"><lightning:spinner variant="brand" size="large"/></div>
+    </aura:if>
+    
+    <div class="flexipageComponent container forceRelatedListSingleContainer">
+        <lightning:card class="slds-card_boundary forceRelatedListCardDesktop" title="{!v.ObjectName}" iconName="standard:person_account">
+            <div class="slds-theme_error">
+                <aura:if isTrue="{!v.message != null}">
+                    <div class="{!'slds-box slds-theme–alert-texture slds-theme–' + v.type}">
+                        <lightning:icon iconName="{! 'utility:'+ v.type }" size="medium" alternativeText="{!v.type}" Class="iconContainer"/>&nbsp;
+                        <span class="slds-text-body–regular">
+                            <aura:unescapedHtml value="{!v.message}"/>
+                        </span>
+                    </div>
+                </aura:if>
+            </div>
+            
+            <div class="slds-align_absolute-center" style="width: 500px;">
+                <ui:inputSelect class="slds-input slds-text-align-center" aura:id="selectedViewId" change="{!c.getDataCon}">
+                    <ui:inputSelectOption label="None"/>
+                    <aura:iteration items="{!v.sObjectListViewList}" var="listview">           
+                        <ui:inputSelectOption text="{!listview.Id}" label="{!listview.Name}"/>
+                    </aura:iteration>
+                </ui:inputSelect>
+            </div>
+        </lightning:card>
+    </div>
+    
+    <div style="text-align:right;">
+        <lightning:button variant="brand" label="Cancel" title="Cancel" onclick="{!c.closeExport}"/>
+    </div>
+</aura:component>
