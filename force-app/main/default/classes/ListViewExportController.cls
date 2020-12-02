@@ -51,7 +51,7 @@ public class ListViewExportController {
             List<String> fieldsList = dataCon.query.substringAfter('SELECT').substringBefore('FROM').split(',');
             Map<String, SObjectField> fields = Schema.getGlobalDescribe().get(ObjectName).getDescribe().fields.getMap();
             Schema.DescribeFieldResult sc;
-            List<String> systemFields = Label.GenericStandardExport_SystemFields.split(',');
+            List<String> systemFields = Label.SystemFields.split(',');
             List<String> addedFields = new List<String>();
             Map<String, String> fieldMapping = getMapping(ObjectName);
             for(String f : fieldsList){
@@ -88,7 +88,7 @@ public class ListViewExportController {
         req.setHeader('Authorization',  'Bearer ' + getToken());
         
         if(Test.isRunningTest()){
-            ExportCalloutMock queryMock = new ExportCalloutMock(GenericStandardExportCalloutMock.CalloutType.QUERY);
+            ExportCalloutMock queryMock = new ExportCalloutMock(ExportCalloutMock.CalloutType.QUERY);
             Test.setMock(HttpCalloutMock.class, queryMock);
         }
         

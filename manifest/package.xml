@@ -27,6 +27,11 @@
 		<name>CustomField</name>
 	</types>
 	<types>
+		<members>ExternalToken</members>
+		<members>SystemFields</members>
+		<name>CustomLabel</name>
+	</types>
+	<types>
 		<members>Export__mdt</members>
 		<members>ObjectAndFields__mdt</members>
 		<name>CustomObject</name>

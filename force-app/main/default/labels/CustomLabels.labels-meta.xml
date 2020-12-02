@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>ExternalToken</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ExternalToken</shortDescription>
+        <value>mc8x/qdTrXR5lmJyJ9KZ49kEL4+9o/2g</value>
+    </labels>
+    <labels>
+        <fullName>SystemFields</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SystemFields</shortDescription>
+        <value>Id,CurrencyIsoCode,SystemModstamp,RecordTypeId,AccountId,Account.Id,CreatedById,OwnerId,ParentId</value>
+    </labels>
+</CustomLabels>
