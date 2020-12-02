@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+	<types>
+		<members>ExportCalloutMock</members>
+		<members>ExportField</members>
+		<members>ListViewExport</members>
+		<members>ListViewExportController</members>
+		<name>ApexClass</name>
+	</types>
+	<types>
+		<members>Base</members>
+		<members>ListViewExport</members>
+		<name>AuraDefinitionBundle</name>
+	</types>
+	<version>49.0</version>
+</Package>
