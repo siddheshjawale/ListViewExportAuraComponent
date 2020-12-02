@@ -12,5 +12,24 @@
 		<members>ListViewExport</members>
 		<name>AuraDefinitionBundle</name>
 	</types>
+	<types>
+		<members>Generic_Standard_Export__mdt.Client_Id__c</members>
+		<members>Generic_Standard_Export__mdt.Client_Secret__c</members>
+		<members>Generic_Standard_Export__mdt.Password__c</members>
+		<members>Generic_Standard_Export__mdt.Token__c</members>
+		<members>Generic_Standard_Export__mdt.Username__c</members>
+		<members>ObjectAndFields__mdt.Field__c</members>
+		<members>ObjectAndFields__mdt.Filter_Name__c</members>
+		<members>ObjectAndFields__mdt.Label__c</members>
+		<members>ObjectAndFields__mdt.ObjectAPIName__c</members>
+		<members>ObjectAndFields__mdt.ObjectFields__c</members>
+		<members>ObjectAndFields__mdt.Type__c</members>
+		<name>CustomField</name>
+	</types>
+	<types>
+		<members>Generic_Standard_Export__mdt</members>
+		<members>ObjectAndFields__mdt</members>
+		<name>CustomObject</name>
+	</types>
 	<version>49.0</version>
 </Package>
